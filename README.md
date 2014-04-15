@@ -2,6 +2,11 @@
 
 Fuzzy searching in PHP made easy!
 
+## Installation
+
+`composer require ilya/fuzzy:~1`
+
+## Use
 
 `array search(array $rows, string $query, integer $threshold = 3)`
 
