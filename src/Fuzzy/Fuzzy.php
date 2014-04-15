@@ -16,7 +16,7 @@ class Fuzzy {
 
         foreach($rows as $row)
         {
-            $distance = \levenshtein($query, $row);
+            $distance = $this->calculateDistance($query, $row);
 
             if ($threshold >= $distance)
             {
@@ -35,6 +35,18 @@ class Fuzzy {
             return $element[1];
 
         }, $matched);
+    }
+
+    /**
+     * Calculate Levenshtein distance between two strings
+     *
+     * @param string $first
+     * @param string $second
+     * @return int
+     */
+    protected function calculateDistance($first, $second)
+    {
+        return \levenshtein($first, $second);
     }
 
 }
