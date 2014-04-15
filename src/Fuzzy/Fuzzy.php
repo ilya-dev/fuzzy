@@ -24,10 +24,7 @@ class Fuzzy {
             }
         }
 
-        \usort($matched, function(array $left, array $right)
-        {
-            return ($left[0] - $right[0]);
-        });
+        $matched = $this->sortMatchedStrings($matched);
 
         return \array_map(function(array $element)
         {
@@ -47,6 +44,22 @@ class Fuzzy {
     protected function calculateDistance($first, $second)
     {
         return \levenshtein($first, $second);
+    }
+
+    /**
+     * Sort the matched strings
+     *
+     * @param array $matched
+     * @return array
+     */
+    protected function sortMatchedStrings(array $matched)
+    {
+        \usort($matched, function(array $left, array $right)
+        {
+            return ($left[0] - $right[0]);
+        });
+
+        return $matched;
     }
 
 }
