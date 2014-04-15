@@ -14,7 +14,15 @@ class FuzzySpec extends ObjectBehavior {
     {
         $rows = ['castToArr', 'cast', 'castToArray', 'toArr', 'toArray', 'castTo'];
 
-        $this->search($rows, 'castToArray', 3)->shouldReturn(['castToArray', 'castToArr']);
+        $this->search($rows, 'castToArray', 3)->shouldReturn([
+            'castToArray', 'castToArr'
+        ]);
+
+        $this->search($rows, 'castToArray', 0)->shouldReturn(['castToArray']);
+
+        $this->search($rows, 'castToArray', 5)->shouldReturn([
+            'castToArray', 'castToArr', 'toArray', 'castTo'
+        ]);
     }
 
 }
