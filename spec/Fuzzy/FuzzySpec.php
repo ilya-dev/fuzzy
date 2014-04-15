@@ -10,7 +10,12 @@ class FuzzySpec extends ObjectBehavior {
         $this->shouldHaveType('Fuzzy\Fuzzy');
     }
 
+    function it_performs_fuzzy_string_searching()
+    {
+        $rows = ['castToArray', 'cast', 'castToArr', 'toArr', 'toArray', 'castTo'];
 
+        $this->search($rows, 3)->shouldReturn(['castToArray', 'castToArr']);
+    }
 
 }
 
