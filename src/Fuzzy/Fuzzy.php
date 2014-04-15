@@ -24,14 +24,7 @@ class Fuzzy {
             }
         }
 
-        $matched = $this->sortMatchedStrings($matched);
-
-        return \array_map(function(array $element)
-        {
-
-            return $element[1];
-
-        }, $matched);
+        return $this->transformResult($this->sortMatchedStrings($matched));
     }
 
     /**
@@ -60,6 +53,22 @@ class Fuzzy {
         });
 
         return $matched;
+    }
+
+    /**
+     * Transform the given array
+     *
+     * @param array $matched
+     * @return array
+     */
+    protected function transformResult(array $matched)
+    {
+        $iterator = function(array $element)
+        {
+            return $element[1];
+        };
+
+        return \array_map($iterator, $matched);
     }
 
 }
