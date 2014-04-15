@@ -12,9 +12,9 @@ class FuzzySpec extends ObjectBehavior {
 
     function it_performs_fuzzy_string_searching()
     {
-        $rows = ['castToArray', 'cast', 'castToArr', 'toArr', 'toArray', 'castTo'];
+        $rows = ['castToArr', 'cast', 'castToArray', 'toArr', 'toArray', 'castTo'];
 
-        $this->search($rows, 3)->shouldReturn(['castToArray', 'castToArr']);
+        $this->search($rows, 'castToArray', 3)->shouldReturn(['castToArray', 'castToArr']);
     }
 
 }
