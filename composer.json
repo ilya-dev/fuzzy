@@ -1,0 +1,16 @@
+{
+    "name": "ilya/fuzzy",
+    "description": "Nice PHP library for fuzzy string searching",
+    "license": "MIT",
+    "keywords": ["fuzzy", "string", "search"],
+
+    "require-dev": {
+        "phpspec/phpspec": "~2"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Fuzzy\\": "src/Fuzzy"
+        }
+    }
+}
