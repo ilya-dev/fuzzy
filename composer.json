@@ -5,7 +5,8 @@
     "keywords": ["fuzzy", "string", "search"],
 
     "require-dev": {
-        "phpspec/phpspec": "~2"
+        "phpspec/phpspec": "~2",
+        "ilya/exo": "~1"
     },
 
     "autoload": {

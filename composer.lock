@@ -3,11 +3,145 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6f7f38fd0b9766b3fb9aa2912edab6cb",
+    "hash": "6880c46ffdd0f017c136bed6524c3c63",
     "packages": [
 
     ],
     "packages-dev": [
+        {
+            "name": "horse/horse",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/horse-php/horse.git",
+                "reference": "e2b72508dde353de6cacfbed852aa3de3fc06eff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/horse-php/horse/zipball/e2b72508dde353de6cacfbed852aa3de3fc06eff",
+                "reference": "e2b72508dde353de6cacfbed852aa3de3fc06eff",
+                "shasum": ""
+            },
+            "require": {
+                "ilya/block": "~1",
+                "symfony/console": "2.4.*"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "2.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Horse\\": "src/Horse"
+                },
+                "classmap": [
+                    "tests/DummyCommand.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Powerful symfony/console wrapper",
+            "keywords": [
+                "console",
+                "symfony",
+                "wrapper"
+            ],
+            "time": "2014-05-02 08:24:56"
+        },
+        {
+            "name": "ilya/block",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ilya-dev/block.git",
+                "reference": "52146cd99aa8d54f112cb30058e233e4ebbeb046"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ilya-dev/block/zipball/52146cd99aa8d54f112cb30058e233e4ebbeb046",
+                "reference": "52146cd99aa8d54f112cb30058e233e4ebbeb046",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Block\\": "src/Block/"
+                },
+                "files": [
+                    "tests/Dummy.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ilya S",
+                    "email": "public.ilya.s@gmail.com"
+                }
+            ],
+            "description": "Parsing docblocks made easy",
+            "keywords": [
+                "blocks",
+                "docblocks",
+                "docs",
+                "documentation",
+                "parsing",
+                "php",
+                "reflection"
+            ],
+            "time": "2014-05-01 07:33:40"
+        },
+        {
+            "name": "ilya/exo",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ilya-dev/exo.git",
+                "reference": "94dd03a1b09378464607ad269afa367e78c9d154"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ilya-dev/exo/zipball/94dd03a1b09378464607ad269afa367e78c9d154",
+                "reference": "94dd03a1b09378464607ad269afa367e78c9d154",
+                "shasum": ""
+            },
+            "require": {
+                "horse/horse": "~1"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "2.0.*"
+            },
+            "bin": [
+                "bin/exo"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Exo\\": "source/Exo"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Save your time writing documentation.",
+            "keywords": [
+                "documentation",
+                "examples",
+                "markdown"
+            ],
+            "time": "2014-05-18 15:40:36"
+        },
         {
             "name": "phpspec/php-diff",
             "version": "v1.0.2",
@@ -171,17 +305,17 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "ef20f1f58d7f693ee888353962bd2db336e3bbcb"
+                "reference": "2e452005b1e1d003d23702d227e23614679eb5ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/ef20f1f58d7f693ee888353962bd2db336e3bbcb",
-                "reference": "ef20f1f58d7f693ee888353962bd2db336e3bbcb",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/2e452005b1e1d003d23702d227e23614679eb5ca",
+                "reference": "2e452005b1e1d003d23702d227e23614679eb5ca",
                 "shasum": ""
             },
             "require": {
@@ -222,21 +356,21 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-03-01 17:35:04"
+            "time": "2014-04-27 13:34:57"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "4708b8cd41984a5ba29fe7dd40716f7f761ac501"
+                "reference": "e539602e5455aa086c0e81e604745af7789e4d8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/4708b8cd41984a5ba29fe7dd40716f7f761ac501",
-                "reference": "4708b8cd41984a5ba29fe7dd40716f7f761ac501",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/e539602e5455aa086c0e81e604745af7789e4d8a",
+                "reference": "e539602e5455aa086c0e81e604745af7789e4d8a",
                 "shasum": ""
             },
             "require": {
@@ -278,21 +412,21 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2014-02-11 13:52:09"
+            "time": "2014-04-16 10:34:31"
         },
         {
             "name": "symfony/finder",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "target-dir": "Symfony/Component/Finder",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "ab301c7d21f536c34ab6c2c79dba8d465104c518"
+                "reference": "25e1e7d5e7376f8a92ae3b1d714d956edf33a730"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/ab301c7d21f536c34ab6c2c79dba8d465104c518",
-                "reference": "ab301c7d21f536c34ab6c2c79dba8d465104c518",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/25e1e7d5e7376f8a92ae3b1d714d956edf33a730",
+                "reference": "25e1e7d5e7376f8a92ae3b1d714d956edf33a730",
                 "shasum": ""
             },
             "require": {
@@ -327,21 +461,21 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2014-03-01 17:35:04"
+            "time": "2014-04-27 13:34:57"
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "77a41c2835ab7cfe8bf6d15e25d3af8f3eb3bacd"
+                "reference": "65539ecde838f9c0d18b006b2101e3deb4b5c9ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/77a41c2835ab7cfe8bf6d15e25d3af8f3eb3bacd",
-                "reference": "77a41c2835ab7cfe8bf6d15e25d3af8f3eb3bacd",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/65539ecde838f9c0d18b006b2101e3deb4b5c9ff",
+                "reference": "65539ecde838f9c0d18b006b2101e3deb4b5c9ff",
                 "shasum": ""
             },
             "require": {
@@ -376,7 +510,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-03-12 18:29:58"
+            "time": "2014-04-18 20:37:09"
         }
     ],
     "aliases": [
