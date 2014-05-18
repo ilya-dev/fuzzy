@@ -103,16 +103,16 @@
         },
         {
             "name": "ilya/exo",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ilya-dev/exo.git",
-                "reference": "94dd03a1b09378464607ad269afa367e78c9d154"
+                "reference": "89960a0116513c3172f107041bc9b9fa80ba8e54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ilya-dev/exo/zipball/94dd03a1b09378464607ad269afa367e78c9d154",
-                "reference": "94dd03a1b09378464607ad269afa367e78c9d154",
+                "url": "https://api.github.com/repos/ilya-dev/exo/zipball/89960a0116513c3172f107041bc9b9fa80ba8e54",
+                "reference": "89960a0116513c3172f107041bc9b9fa80ba8e54",
                 "shasum": ""
             },
             "require": {
@@ -140,7 +140,7 @@
                 "examples",
                 "markdown"
             ],
-            "time": "2014-05-18 15:40:36"
+            "time": "2014-05-18 16:08:01"
         },
         {
             "name": "phpspec/php-diff",
