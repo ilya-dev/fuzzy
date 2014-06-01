@@ -1,7 +1,6 @@
 <?php namespace spec\Fuzzy;
 
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class FuzzySpec extends ObjectBehavior {
 
@@ -14,11 +13,13 @@ class FuzzySpec extends ObjectBehavior {
     {
         $rows = ['castToArr', 'cast', 'castToArray', 'toArr', 'toArray', 'castTo'];
 
+        $this->search($rows, 'castToArray', 0)->shouldReturn([
+            'castToArray'
+        ]);
+
         $this->search($rows, 'castToArray', 3)->shouldReturn([
             'castToArray', 'castToArr'
         ]);
-
-        $this->search($rows, 'castToArray', 0)->shouldReturn(['castToArray']);
 
         $this->search($rows, 'castToArray', 5)->shouldReturn([
             'castToArray', 'castToArr', 'toArray', 'castTo'
@@ -26,4 +27,3 @@ class FuzzySpec extends ObjectBehavior {
     }
 
 }
-
