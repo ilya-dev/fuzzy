@@ -3,11 +3,11 @@
 class Fuzzy {
 
     /**
-     * Performs fuzzy string searching
+     * Perform a fuzzy string searching.
      *
      * @param array $rows
      * @param string $query
-     * @param int $threshold
+     * @param integer $threshold
      * @return array
      */
     public function search(array $rows, $query, $threshold = 3)
@@ -28,26 +28,26 @@ class Fuzzy {
     }
 
     /**
-     * Calculate Levenshtein distance between two strings
+     * Calculate the Levenshtein distance between two strings.
      *
-     * @param string $first
-     * @param string $second
+     * @param string $one
+     * @param string $two
      * @return int
      */
-    protected function calculateDistance($first, $second)
+    protected function calculateDistance($one, $two)
     {
-        return \levenshtein($first, $second);
+        return levenshtein($one, $two);
     }
 
     /**
-     * Sort the matched strings
+     * Sort the matched strings.
      *
      * @param array $matched
      * @return array
      */
     protected function sortMatchedStrings(array $matched)
     {
-        \usort($matched, function(array $left, array $right)
+        usort($matched, function(array $left, array $right)
         {
             return ($left[0] - $right[0]);
         });
@@ -56,7 +56,7 @@ class Fuzzy {
     }
 
     /**
-     * Transform the given array
+     * Transform a given array of matches.
      *
      * @param array $matched
      * @return array
@@ -68,8 +68,7 @@ class Fuzzy {
             return $element[1];
         };
 
-        return \array_map($iterator, $matched);
+        return array_map($iterator, $matched);
     }
 
 }
-
